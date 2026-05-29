@@ -6,11 +6,12 @@ begin
 insert into salary(operation_type,salary_differnce)
 values('insert',new.salary);
 end/
-
+--------------------
 values('update',new.salary - old.salary)
-
+--------------------
 values('delete',-old.salary);
 
+-------------------------------------------------------------------------------
 
 select count(ename) as "no of emp" from emp;
 select max(age) as "max age" from employee;
