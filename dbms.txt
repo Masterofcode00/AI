@@ -1,0 +1,18 @@
+delimiter /
+create trigger salary_insert_trigger
+after insert on customer
+for each row 
+begin
+insert into salary(operation_type,salary_differnce)
+values('insert',new.salary);
+end/
+
+values('update',new.salary - old.salary)
+
+values('delete',-old.salary);
+
+
+select count(ename) as "no of emp" from emp;
+select max(age) as "max age" from employee;
+select Ename,salary from Emp order by salary asc;(desc)
+select age, sum(salary) as "total salary" from emp group by age;
